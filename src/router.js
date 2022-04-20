@@ -33,4 +33,10 @@ routes.get('/medico',MedicoController.index)
 routes.put('/medico',MedicoController.update)
 routes.delete('/medico',MedicoController.delete)
 
+const PermissoesController =  requeire('../controller/Permissoes');
+routes.post('/permissoes',PermissoesController.store)
+routes.get('/permissoes',PermissoesController.index)
+routes.put('/permissoes',PermissoesController.update)
+routes.delete('permissoes',PermissoesController.delete)
+
 module.exports = routes
