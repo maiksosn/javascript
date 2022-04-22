@@ -33,7 +33,7 @@ routes.get('/medico',MedicoController.index)
 routes.put('/medico',MedicoController.update)
 routes.delete('/medico',MedicoController.delete)
 
-const PermissoesController =  requeire('../controller/Permissoes');
+const PermissoesController =  require('../controller/Permissoes');
 routes.post('/permissoes',PermissoesController.store)
 routes.get('/permissoes',PermissoesController.index)
 routes.put('/permissoes',PermissoesController.update)
