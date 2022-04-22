@@ -24,7 +24,7 @@ module.exports = {
 
     // DELETAR -> DELETE
     async delete(req, res){
-        let Permissoes = req.body
+        let permissoes = req.body
         permissoes = await Permissoes.deleteOne({'_id': req.query.id},permissoes)
         return res.json(permissoes)
     }
