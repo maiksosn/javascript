@@ -1,5 +1,6 @@
 const axios = require('axios')
 module.exports = {
+    // Fazendo a chamada da API
     async index(req, res){
         let cep = req.query.cep
         if(cep){

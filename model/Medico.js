@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+
+// Modelo do Médico
 const MedicoSchema = new mongoose.Schema({
     nome          : String,
     cpf           : Number,

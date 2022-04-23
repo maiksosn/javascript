@@ -1,4 +1,6 @@
 const mongoose = resquire('moongose')
+
+// Modelo das clinicas ligada as especialidades
 const ClinicaHasEspecialidadeSchema = new mongoose.Schema({
     Medico  : {
         type: mongoose.Schema.Types.ObjectId,

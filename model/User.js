@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// Modelo do Usúario
 const userSchema = new mongoose.Schema({
     name         : String,
     email        : String,

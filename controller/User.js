@@ -1,9 +1,9 @@
 const User = require('../model/User')
 const Email = require('../services/Email')
 
-// CRUD
+// Aonde vamos criar o crud
 module.exports = {
-    // CREARE -> CRIAR
+    // CREATE -> CRIAR
     async store (req, res){
         const {name, email, RA, password} = req.body
         const user = await User.create({name, email, RA, password})
@@ -24,7 +24,7 @@ module.exports = {
         const user = await User.find()
         return res.json(user)
     },
-    // UPDATE -> SUBSTITUIR
+    // UPDATE -> ALTERAR
     async update(req, res){
         const{name, email, RA, password} = req.body
         let id = req.query.id

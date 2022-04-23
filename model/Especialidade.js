@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+
+// Modelo das especialidades
 const EspecialidadeSchema = new mongoose.Schema({
     nome         : String,
     criado_em    : String,

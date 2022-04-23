@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+
+// Modelo dos Endereços
 const EnderecoSchema = new mongoose.Schema({
     "cep"         : String,
     "state"       : String,

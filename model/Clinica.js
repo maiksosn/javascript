@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Modelo da Clinica
 const ClinicaSchema = new mongoose.Schema({
     nome         : String,
     cnpj         : String,
