@@ -9,13 +9,13 @@ module.exports = {
     // CRIAR -> CREATE
     async store(req, res){
         let permissoes = req.body
-        permissoes = await permissoes.create(permissoes)
+        permissoes = await Permissoes.create(permissoes)
         return res.json(permissoes)
     },
     // MODIFICAR -> UPDATE
     async update(req, res){
         let permissoes = req.body
-        permissoes = await Permissoes.updateOne({'_id': req.query.id},Permissoes)
+        permissoes = await Permissoes.updateOne({'_id': req.query.id},permissoes)
         return res.json(permissoes)
     },
     // DELETAR -> DELETE
