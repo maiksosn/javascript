@@ -1,4 +1,4 @@
-const permissoes = require('../model/Permissao')
+const Permissao = require('../model/Permissao')
 
 module.exports = { 
     // Crud - Read, aonde séra feito somente leitura;

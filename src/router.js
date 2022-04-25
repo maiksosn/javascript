@@ -40,11 +40,11 @@ routes.put('/medico',MedicoController.update)
 routes.delete('/medico',MedicoController.delete)
 
 // Rota das Permissoes
-const PermissoesController =  require('../controller/Permissoes');
-routes.post('/permissoes',PermissoesController.store)
-routes.get('/permissoes',PermissoesController.index)
-routes.put('/permissoes',PermissoesController.update)
-routes.delete('permissoes',PermissoesController.delete)
+const PermissaoController =  require('../controller/Permissao');
+routes.post('/permissao',PermissaoController.store)
+routes.get('/permissao',PermissaoController.index)
+routes.put('/permissao',PermissaoController.update)
+routes.delete('permissao',PermissaoController.delete)
 
 // Rota da Agenda 
 const AgendaController =  require('../controller/Agenda');
