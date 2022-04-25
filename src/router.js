@@ -51,6 +51,6 @@ const AgendaController =  require('../controller/Agenda');
 routes.post('/agenda',AgendaController.store)
 routes.get('/agenda',AgendaController.index)
 routes.put('/agenda',AgendaController.update)
-routes.delete('/agenda',PermissoesController.delete)
+routes.delete('/agenda',AgendaController.delete)
 
 module.exports = routes
