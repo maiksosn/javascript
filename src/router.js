@@ -46,4 +46,11 @@ routes.get('/permissoes',PermissoesController.index)
 routes.put('/permissoes',PermissoesController.update)
 routes.delete('permissoes',PermissoesController.delete)
 
+// Rota da Agenda 
+const AgendaController =  require('../controller/Agenda');
+routes.post('/agenda',AgendaController.store)
+routes.get('/agenda',AgendaController.index)
+routes.put('/agenda',AgendaController.update)
+routes.delete('/agenda',PermissoesController.delete)
+
 module.exports = routes
