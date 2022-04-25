@@ -1,28 +1,28 @@
-const Permissoes = require('../model/Especialidade')
+const permissoes = require('../model/Permissao')
 
 module.exports = { 
-    // LER  -> READ
+    // Crud - Read, aonde séra feito somente leitura;
     async index(req, res){
-        let permissoes = await Permissoes.find()
-        return res.json(permissoes)
+        let medicos = await Medico.find()
+        return res.json(medicos)
     },
-    // CRIAR -> CREATE
+    // Crud - Create, aonde será feito a inclusão;
     async store(req, res){
-        let permissoes = req.body
-        permissoes = await Permissoes.create(permissoes)
-        return res.json(permissoes)
+        let medico = req.body
+        medico = await Medico.create(medico)
+        return res.json(medico)
     },
-    // MODIFICAR -> UPDATE
+    // Crud - Update, aonde será feito a edição;
     async update(req, res){
-        let permissoes = req.body
-        permissoes = await Permissoes.updateOne({'_id': req.query.id},permissoes)
-        return res.json(permissoes)
+        let medico = req.body
+        medico = await Medico.updateOne({'_id': req.query.id},medico)
+        return res.json(medico)
     },
-    // DELETAR -> DELETE
+    // Crud - Delete, aonde será feito o delete;
     async delete(req, res){
-        let permissoes = req.body
-        permissoes = await Permissoes.deleteOne({'_id': req.query.id},permissoes)
-        return res.json(permissoes)
+        let medico = await Medico.FindOne({'_id': req.query.id})
+        medico = await Medico.deleteOne({'_id': req.query.id},medico)
+        return res.json(medico)
     }
 
 }

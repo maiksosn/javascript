@@ -1,9 +1,8 @@
 const User = require('../model/User')
 const Email = require('../services/Email')
 
-// Aonde vamos criar o crud
 module.exports = {
-    // CREATE -> CRIAR
+    // Crud - Create, aonde será feito a inclusão;
     async store (req, res){
         const {name, email, RA, password} = req.body
         const user = await User.create({name, email, RA, password})
@@ -19,12 +18,12 @@ module.exports = {
         .catch(console.error)
         return res.json(user)
     },
-    // READ -> LER
+    // Crud - Read, aonde séra feito somente leitura;
     async index(req, res){
         const user = await User.find()
         return res.json(user)
     },
-    // UPDATE -> ALTERAR
+    // Crud - Update, aonde será feito a edição;
     async update(req, res){
         const{name, email, RA, password} = req.body
         let id = req.query.id
@@ -35,7 +34,7 @@ module.exports = {
             data : user
         })
     },
-    // DELETE -> DELETAR
+    // Crud - Delete, aonde será feito o delete;
     async delete(req, res){
         let id = req.query.id
         let user = await User.findById(id);
